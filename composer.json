@@ -1,0 +1,36 @@
+{
+    "name": "amethyst/batch",
+    "type": "library",
+    "keywords": ["laravel", "amethyst", "amethyst-batch", "batch"],
+    "license": "MIT",
+    "require": {
+        "php": ">=7.1",
+        "amethyst/common": "0.1.*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "7.*",
+        "orchestra/testbench": "3.*",
+        "amethyst/foo": "0.1.*"
+    },
+    "autoload": {
+        "psr-4" : {
+            "Amethyst\\" : "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": { 
+            "Amethyst\\Tests\\": "tests/" 
+        }
+    },
+    "extra": {
+        "amethyst": {
+            "package": "batch",
+            "namespace": "Amethyst"
+        },
+        "laravel": {
+            "providers": [
+                "Amethyst\\Providers\\BatchServiceProvider"
+            ]
+        }
+    }
+}
