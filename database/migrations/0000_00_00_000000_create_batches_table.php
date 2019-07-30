@@ -19,7 +19,6 @@ class CreateBatchesTable extends Migration
             $table->string('target_type');
             $table->integer('target_id')->unsigned();
             $table->timestamps();
-            $table->softDeletes();
         });
     }
 
