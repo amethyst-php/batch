@@ -13,4 +13,9 @@ class BatchManager extends Manager
      * @var string
      */
     protected $config = 'amethyst.batch.data.batch';
+
+    public function removeOlder(string $namespace, int $number): void
+    {
+    	$this->getOlder($namespace, $number)->delete();
+    }
 }
