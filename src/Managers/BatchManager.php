@@ -16,6 +16,6 @@ class BatchManager extends Manager
 
     public function removeOlder(string $namespace, int $number): void
     {
-    	$this->getOlder($namespace, $number)->delete();
+    	$this->getRepository()->getOlder($namespace, $number)->delete();
     }
 }
