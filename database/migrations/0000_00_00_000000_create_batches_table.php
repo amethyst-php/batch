@@ -16,7 +16,7 @@ class CreateBatchesTable extends Migration
             $table->increments('id');
             $table->string('number');
             $table->string('namespace');
-            $table->string('target_type');
+            $table->string('target_type')->nullable();
             $table->integer('target_id')->unsigned();
             $table->timestamps();
         });

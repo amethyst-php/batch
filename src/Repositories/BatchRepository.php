@@ -23,6 +23,18 @@ class BatchRepository extends Repository
     }  
 
     /**
+     * Get oldest record
+     *
+     * @param string $namespace
+     *
+     * @return Builder
+     */
+    public function getNewest(string $namespace)
+    {
+        return $this->newQuery()->where('namespace', $namespace)->orderBy('number', 'DESC')->first();
+    }
+
+    /**
      * Get older records
      *
      * @param string $namespace

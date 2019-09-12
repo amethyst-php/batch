@@ -21,12 +21,12 @@ class BatchSchema extends Schema
             Attributes\TextAttribute::make('namespace')
                 ->setRequired(true),
             Attributes\EnumAttribute::make('target_type', app('amethyst')->getMorphListable('batch', 'target'))
-                ->setRequired(true),
+                ->setRequired(false),
             Attributes\MorphToAttribute::make('target_id')
                 ->setRelationKey('target_type')
                 ->setRelationName('target')
                 ->setRelations(app('amethyst')->getMorphRelationable('batch', 'target'))
-                ->setRequired(true),
+                ->setRequired(false),
             Attributes\CreatedAtAttribute::make(),
             Attributes\UpdatedAtAttribute::make(),
             Attributes\DeletedAtAttribute::make(),
